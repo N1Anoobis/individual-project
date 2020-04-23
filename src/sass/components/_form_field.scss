@@ -1,0 +1,341 @@
+h1 {
+  color: $Headline-color;
+  font-weight: lighter;
+  font-family: $brand-font;
+  text-transform: uppercase;
+  font-size: $headline-font-size;
+  margin: 10px;
+}
+
+h2 {
+  font-family: $paragraph-font;
+  color: $Headline-color;
+  font-size: $paragraph-font-size;
+  margin: 10px;
+}
+
+p {
+  color: $paragraph-color;
+  font-family: $paragraph-font;
+  font-weight: lighter;
+  font-size: $paragraph-font-size;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $activ-link-color;
+  }
+}
+
+///////////////svg
+img {
+  width: 15px;
+  transition: .3s;
+
+
+  &:hover {
+    filter: invert(56%) sepia(100%) saturate(564%) hue-rotate(358deg) brightness(99%) contrast(108%);
+  }
+}
+
+////////////////double input
+
+
+.double-input {
+  // box-sizing: border-box;
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid $input-color;
+  transition: .3s;
+
+  &:hover {
+    border-color: $lighter-color;
+  }
+
+  &:hover input::-webkit-calendar-picker-indicator {
+    filter: invert(32%) sepia(11%) saturate(189%) hue-rotate(314deg) brightness(98%) contrast(84%);
+  }
+
+  input {
+    padding: 10px;
+    width: 170px;
+    // box-sizing: border-box;
+    margin: 0;
+    border: none;
+    outline-style: none;
+
+  }
+
+  input::-webkit-clear-button,
+  input::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  input::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    filter: invert(100%) sepia(0%) saturate(2605%) hue-rotate(19deg) brightness(117%) contrast(78%);
+    background: url(/images/icons/calendar.svg) no-repeat;
+    width: 10px;
+    height: 10px;
+    transition: .3s;
+    // &:hover {
+    //   filter: invert(56%) sepia(100%) saturate(564%) hue-rotate(358deg) brightness(99%) contrast(108%);
+    // }
+  }
+
+  input:after {
+    content: "";
+    display: block;
+    content: '';
+    width: 1px;
+    height: 20px;
+    background-color: $input-color;
+    left: 45%;
+    bottom: 5px;
+  }
+
+  input:nth-child(2)::after {
+    content: "";
+    display: none;
+  }
+
+  input.remove::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+}
+
+////////////btn
+.btn {
+  background-color: $button-color;
+  font-family: $brand-font;
+  padding: 10px 25px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  // text-transform: capitalize;
+  font-size: $button-font-size;
+  display: inline-flex;
+  align-items: center;
+  transition: .3s;
+
+  i {
+    font-size: $paragraph-font-size;
+    margin-right: 3px;
+  }
+
+  &:hover {
+    background-color: $activ-link-color;
+  }
+}
+
+////////////////nav
+.ul {
+  width: 188px;
+  background-color: $menu-left-color;
+  padding-left: 0;
+
+  li {
+    padding: 12px;
+    padding-left: 15px;
+    text-align: left;
+    list-style: none;
+
+
+    a {
+      font-family: $brand-font;
+      color: $Headline-color;
+      font-size: $paragraph-font-size;
+
+      img {
+        height: 14px;
+        width: 16px;
+        padding-right: 15px;
+        filter: invert(57%) sepia(7%) saturate(0%) hue-rotate(175deg) brightness(102%) contrast(98%);
+      }
+    }
+
+    &:hover {
+      border-left: 4px $button-color solid;
+      background-color: $lighter-color;
+    }
+
+    &:hover img {
+      filter: invert(100%) sepia(7%) saturate(23%) hue-rotate(259deg) brightness(121%) contrast(100%);
+    }
+
+    &:hover a {
+      color: white;
+      margin-left: -4px;
+    }
+  }
+}
+
+//////////singups
+.tab {
+  padding: 10px 20px;
+  font-family: $brand-font;
+  border: none;
+  display: inline-flex;
+  transition: .3s;
+
+  span {
+    height: 15px;
+    width: 15px;
+    background-color: $dot-color;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background-color: $tab-bacgr-color;
+  }
+}
+
+////////////table
+.table {
+  width: 50%;
+  border-collapse: collapse;
+  border-top: 1px solid $Headline-color;
+
+  tr {
+    transition: .3s;
+    border-bottom: 1px solid $Headline-color;
+
+    img {
+      filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(53deg) brightness(112%) contrast(101%);
+    }
+
+    &:hover {
+      background-color: $tab-bacgr-color;
+
+      img {
+        filter: invert(56%) sepia(100%) saturate(564%) hue-rotate(358deg) brightness(99%) contrast(108%);
+      }
+    }
+
+    &:hover .bin {
+      filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(213deg) brightness(102%) contrast(106%);
+    }
+  }
+}
+
+//table links
+.relocate-items {
+  tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    td a {
+      margin-right: 15px;
+    }
+  }
+}
+
+// table numbers
+.numbers {
+  border-top: none;
+}
+
+//icon-top
+.icon-top {
+  width: 60px;
+  height: 60px;
+  border: 1px $Headline-color solid;
+  border-top: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s;
+  position: relative;
+
+  .little-dot {
+    height: 6px;
+    width: 6px;
+    background-color: $button-color;
+    border-radius: 50%;
+    // display: inline-block;
+    position: absolute;
+    left: 31px;
+    top: 20px;
+  }
+
+  &:hover {
+    background-color: $tab-bacgr-color;
+  }
+}
+
+//long-one
+.long-one {
+  width: 180px;
+
+  .text-inside-long-one {
+    p {
+      font-family: $roboto-font;
+      margin-left: 10px;
+      color: $dot-color;
+    }
+  }
+}
+
+/// long one dark
+.dark {
+  background-color: $menu-left-color;
+  justify-content: space-around;
+
+  &:hover {
+    background-color: $menu-left-color;
+  }
+
+  .text-inside-long-dark {
+    color: white;
+    font-family: $special-font;
+    font-size: $button-font-size;
+  }
+
+  i {
+    color: $Headline-color;
+    font-size: $button-font-size;
+  }
+}
+
+//menager
+.menager {
+  justify-content: left;
+  pointer-events: none;
+
+  img {
+    width: 43px;
+    border-radius: 50%;
+    margin-left: 15px;
+  }
+
+  .little-dot {
+    height: 10px;
+    width: 10px;
+    background-color: $green-dot-color;
+    left: 46px;
+    top: 10px;
+  }
+}
+
+//btn refresh
+.refresh {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(53deg) brightness(112%) contrast(101%);
+
+  }
+}
