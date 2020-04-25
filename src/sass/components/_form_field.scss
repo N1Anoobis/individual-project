@@ -7,6 +7,14 @@ h1 {
   margin: 10px;
 }
 
+h3 {
+  padding: 0;
+  margin: 0;
+  font-family: $roboto-font;
+  font-size: $paragraph-font-size;
+  font-weight: 400;
+}
+
 .underline {
   text-decoration: underline;
 }
@@ -52,7 +60,8 @@ img {
 }
 
 ////////////////double input
-.double-input {
+.double-input,
+.input {
   display: inline-block;
   border-radius: 2px;
   border: 1px solid $input-color;
@@ -124,7 +133,7 @@ img {
   padding: 10px 22px;
   border-radius: 4px;
   border: none;
-  color: white;
+  color: $white-color;
   font-size: $button-font-size;
   display: inline-flex;
   align-items: center;
@@ -143,12 +152,17 @@ img {
   }
 }
 
+//line component
+.line {
+  border-bottom: 1px solid $lighter-color;
+}
+
 ////////////////nav
 .ul {
   padding: 0;
   // overflow: hidden;
   padding-bottom: 40px;
-  border-bottom: 1px solid $lighter-color;
+
 
   li {
     padding: 12px;
@@ -182,7 +196,7 @@ img {
     }
 
     &:hover a {
-      color: white;
+      color: $white-color;
       margin-left: -4px;
     }
   }
@@ -258,8 +272,11 @@ img {
   font-family: $roboto-font;
   font-weight: lighter;
 
-  h2 {
-    padding-bottom: 5px;
+  // h2 {
+  //   padding-bottom: 5px;
+  // }
+  td {
+    margin-bottom: -10px;
   }
 }
 
@@ -325,7 +342,7 @@ img {
   }
 
   .text-inside-long-dark {
-    color: white;
+    color: $white-color;
     font-family: $special-font;
     font-size: $button-font-size;
   }
@@ -366,7 +383,7 @@ img {
 }
 
 //btn refresh
-.refresh-padding {
+.icon-only {
   padding: 12px;
   width: 40px;
 
@@ -375,96 +392,75 @@ img {
   }
 }
 
-section {
-  background-color: $tab-bacgr-color;
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.date-switch {
+  display: inline-flex;
+  align-items: center;
+  background-color: $white-color;
+  border-radius: 3px;
+  padding: 5px 10px;
+  color: $Headline-color;
+  transition: .3s;
+
+  &:hover {
+    color: $menu-left-color;
+    background-color: $tab-bacgr-color;
+
+    img {
+      padding-left: 4px;
+      filter: invert(46%) sepia(0%) saturate(32%) hue-rotate(238deg) brightness(95%) contrast(111%);
+    }
+  }
+
+  h3 {
+    padding-right: 4px;
+  }
+
+  img {
+    padding-left: 4px;
+    filter: invert(100%) sepia(1%) saturate(7500%) hue-rotate(31deg) brightness(97%) contrast(116%);
+  }
 
 }
 
-.sidebar {
-  width: 188px;
-  background-color: $menu-left-color;
-}
+///////////////////////////////////////////////////
 
-.content {
+.pagination {
+  display: inline-flex;
   // display: flex;
-  width: 100%;
-
-
-  // background-color: red;
-  .nav-bar {
-    background-color: white;
-    display: flex;
-    justify-content: flex-end;
-    flex-basis: 100%;
-    // height: 70px;
-    // background-color: red;
-    border-bottom: 1px solid $input-color;
-
-  }
-}
-
-.general {
-  background-color: white;
-  margin: 20px auto;
-  width: 97%;
+  margin: 30px auto;
   // border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-
-  // height: 500px;
-  .import-img {
-    width: 70%;
-    margin: 50px auto;
-
-  }
-}
-
-body {
-  display: flex;
-}
-
-// .double-input {
-//   // margin: auto;
-// }
-
-.box {
-  display: flex;
-  justify-content: center;
-  padding: 30px;
-
-  // display: none;
-  table {
-    margin: 0 35px;
-  }
-}
-
-.box-input {
-  display: flex;
-  justify-content: center;
-  padding: 30px;
-  border-top: 1px solid $input-color;
-  border-bottom: 1px solid $input-color;
+  background-color: $white-color;
 
 }
 
-.links {
-  background-color: white;
-  margin: 20px auto;
-  width: 97%;
-  // border: 1px solid red;
-  display: flex;
-  flex-direction: column;
+.pagination a {
+  font-family: $roboto-font;
+  font-weight: 300;
+  // text-align: center;
+  color: $link-color;
+  // float: left;
+  padding: 10px 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .3s;
 
-  .h2 {
-    border-bottom: 1px solid $input-color;
+  &:last-child {
+    color: $Headline-color;
   }
 
-  table {
-    margin: auto;
-    font-family: $headline-font-size;
+  &:first-child {
+    color: $Headline-color;
   }
 
-  button {
-    margin: 25px auto;
+  &:hover:not(.active) {
+    color: $button-color;
   }
+}
+
+.pagination a.work {
+  font-weight: bolder;
+  color: $Headline-color;
+  background-color: $tab-bacgr-color;
 }
