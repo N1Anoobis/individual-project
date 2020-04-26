@@ -72,12 +72,6 @@ body {
 }
 
 .links {
-  // background-color: white;
-  // margin: 20px auto;
-  // width: 97%;
-  // display: flex;
-  // flex-direction: column;
-
   .h2 {
     border-bottom: 1px solid $input-color;
   }
@@ -141,19 +135,11 @@ body {
     border-top: none;
     background-color: $white-color;
     pointer-events: none;
-    // h2 {
-    //   pointer-events: none;
-    // }
-
+   
     div {
       height: 30px;
       z-index: 1;
       pointer-events: all;
-      //  &:hover{
-      //   img{
-      //     color: $paragraph-color;
-      //   }
-      //  }
     }
 
     &:hover {
@@ -170,3 +156,14 @@ body {
     }
   }
 }
+////////////////////////
+// .detail {
+//   td,
+//   th {
+//     text-align: center;
+
+//     &:last-child {
+//       text-align: center;
+//     }
+//   }
+// }

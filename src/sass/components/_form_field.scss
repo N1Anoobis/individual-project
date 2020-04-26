@@ -59,6 +59,16 @@ img {
   // }
 }
 
+//////////////input single
+input[type='text'] {
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-indent: 20px;
+  background-size: 15px;
+  background-position: left;
+}
+
 ////////////////double input
 .double-input,
 .input {
@@ -357,6 +367,7 @@ img {
 .user-label {
   justify-content: left;
   pointer-events: none;
+  border-left: none;
 
   img {
     width: 43px;
@@ -463,4 +474,169 @@ img {
   font-weight: bolder;
   color: $Headline-color;
   background-color: $tab-bacgr-color;
+}
+
+//////////////////////////////modal
+/* The Modal (background) */
+.modal {
+  // display: none; /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 5px 0;
+  border: 1px solid #888;
+  width: 80%;
+
+
+  // height: 300px;
+  h2 {
+    display: flex;
+    // flex-basis: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: normal;
+    padding-bottom: 0;
+    padding-top: 0;
+    border-bottom: 1px solid $input-color;
+
+    span {
+      font-size: 25px;
+    }
+  }
+
+  .user-label {
+    margin-top: 15px;
+    // margin-bottom: 15px;
+
+    img {
+      width: 63px;
+    }
+  }
+
+  h4 {
+    font-family: $roboto-font;
+    font-size: $pop-up-font-size;
+    margin: 0;
+    font-weight: 500;
+    color: $menu-left-color;
+    margin-left: 10px;
+  }
+
+  .status {
+
+    display: inline-block;
+    color: $white-color;
+    text-align: center;
+    font-family: $roboto-font;
+    font-size: $pop-up-status-font-size;
+
+    border-radius: 3px;
+    padding: 3px;
+    margin-left: 10px;
+
+  }
+
+  .green {
+    background-color: #04AE00;
+  }
+
+  .gray {
+    background-color: #e3e3e3;
+  }
+
+  .chat-area {
+    border-top: 1px solid $input-color;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: 300;
+    height: 300px;
+
+    .speech-bubble {
+      margin: 15px;
+      position: relative;
+      background: $input-color;
+      border-radius: 2px;
+      text-align: center;
+      display: inline-block;
+      padding: 9px;
+      font-family: $roboto-font;
+      font-size: $paragraph-font-size;
+    }
+
+    .speech-bubble:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: calc(0% + 4px);
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+      border-bottom-color: $input-color;
+      border-top: 0;
+      border-left: 0;
+      margin-left: -4px;
+      margin-top: -5px;
+    }
+
+    .customer {
+      background: $Headline-color;
+      color: $white-color;
+    }
+
+    .customer:after {
+      content: '';
+      left: calc(100% - 2px);
+      border: 6px solid transparent;
+      border-top-color: $Headline-color;
+      border-right: 0;
+      margin-top: 33px;
+    }
+  }
+
+  .box-input {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+    border-bottom: none;
+  }
+.input{
+  width: calc(100% - 100px);
+}
+  ///////////////////////////input text
+  input[type='text'] {
+    width: 100%;
+
+    background-image: url('/images/icons/message.svg');
+    background-size: 5% 40%;
+&::placeholder{
+  padding-left: 15px;
+}
+    &:focus {
+      background-image: none;
+      text-indent: 0px;
+    }
+  }
 }
