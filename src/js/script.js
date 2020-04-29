@@ -1,7 +1,7 @@
 function toggleMenu(visible) {
   if (document.documentElement.clientWidth < 767) {
     document.querySelector('.sidebar').classList.toggle('show', visible);
-  
+
   }
 }
 //listiner for toggleMenu
@@ -35,3 +35,41 @@ window.addEventListener('load', function (e) {
   e.preventDefault();
   moveMenuElements();
 });
+
+
+const pages = document.getElementById('pages').children;
+console.log(pages[0].id);
+const links = document.querySelectorAll('li');
+console.log(links);
+for (let link of links) {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const clickedElement = e.target;
+
+    const id = clickedElement.getAttribute('href').replace('#', '');
+    console.log(id);
+
+    activatePage(id);
+  });
+}
+activatePage(pages[0].id);
+
+function activatePage(pageId) {
+
+  //add class active for page
+  for (let page of pages) {
+    console.log(page.id);
+    // page.classList.add('in-active');
+    if (page.id == pageId) {
+      page.classList.add('active');
+      page.classList.remove('in-active');
+    }else if(page.id != pageId) {
+      page.classList.remove('active');
+      page.classList.add('in-active');
+    }
+
+  }
+
+  //add class active for link
+
+}

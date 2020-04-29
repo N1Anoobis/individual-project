@@ -35,7 +35,7 @@
   @include grid('sm');
 
   .sidebar {
-    overflow-y: scroll;
+    overflow: scroll;
     height: 100%;
     padding-bottom: 30px;
   }

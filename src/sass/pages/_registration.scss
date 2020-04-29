@@ -1,0 +1,13 @@
+.active {
+  display: block;
+  // z-index: 2;
+}
+
+.in-active {
+  display: none;
+}
+
+.sidebar li>a {
+  display: block;
+  height: 100%;
+}
