@@ -1,13 +1,15 @@
-.active {
+.activePage {
   display: block;
-  // z-index: 2;
+  // z-index: 1;
 }
 
 .in-active {
   display: none;
+  z-index: 0;
 }
 
-.sidebar li>a {
-  display: block;
-  height: 100%;
+.activelink {
+  background-color: $lighter-color;
+  border-left: 4px $button-color solid;
+
 }
