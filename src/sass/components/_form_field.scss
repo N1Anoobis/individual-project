@@ -15,13 +15,8 @@ h3 {
   font-weight: 400;
 }
 
-h4 {
-  font-family: $roboto-font;
-  font-size: $pop-up-font-size;
-  margin: 0;
-  font-weight: 500;
-  color: $menu-left-color;
-  margin-left: 10px;
+.h3 {
+  padding-left: 20px;
 }
 
 // .underline {
@@ -61,7 +56,7 @@ a {
 
 ///////////////svg
 img {
-  width: 15px;
+  // width: 15px;
   transition: .3s;
   cursor: pointer;
 
@@ -81,6 +76,75 @@ input[type="email"] {
     border: 1px solid red;
   }
 }
+
+
+.label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+// .label:hover input ~ .checkmark {
+//   background-color: #ccc;
+// }
+
+/* When the checkbox is checked, add a blue background */
+.label input:checked~.checkmark {
+  background-color: green;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.label input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.label .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 //////////////////////////////////////////////////
 .double-input,
 .input {
@@ -89,6 +153,8 @@ input[type="email"] {
   border: 1px solid $input-color;
   transition: .3s;
   margin-right: 15px;
+  // padding-bottom: -1px;
+
 
   &:hover {
     border-color: $lighter-color;
@@ -99,7 +165,7 @@ input[type="email"] {
   }
 
   input {
-    padding: 10px;
+    padding: 9px;
     width: 170px;
 
     margin: 0;
@@ -107,6 +173,7 @@ input[type="email"] {
     outline-style: none;
     font-family: $roboto-font;
     font-weight: lighter;
+
   }
 
   input::-webkit-clear-button,
@@ -294,31 +361,31 @@ input[type="email"] {
 
 //icon-top
 .icon {
-  width: 60px;
-  height: 60px;
-  border: 1px $input-color solid;
-  border-top: none;
-  border-right: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: .2s;
-  position: relative;
-  border-bottom: none;
+  width: 15px;
+  // height: 60px;
+  // border: 1px $input-color solid;
+  // border-top: none;
+  // border-right: none;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // transition: .2s;
+  // position: relative;
+  // border-bottom: none;
 
-  .little-dot {
-    height: 6px;
-    width: 6px;
-    background-color: $button-color;
-    border-radius: 50%;
-    position: absolute;
-    left: 31px;
-    top: 20px;
-  }
+  // .little-dot {
+  //   height: 6px;
+  //   width: 6px;
+  //   background-color: $button-color;
+  //   border-radius: 50%;
+  //   position: absolute;
+  //   left: 31px;
+  //   top: 20px;
+  // }
 
-  &:hover {
-    background-color: $tab-bacgr-color;
-  }
+  // &:hover {
+  //   background-color: $tab-bacgr-color;
+  // }
 }
 
 //blue-text
@@ -429,6 +496,7 @@ input[type="email"] {
     padding-right: 4px;
     color: $input-color;
     font-weight: bold;
+    font-size: 13px;
   }
 
   img {
@@ -523,6 +591,15 @@ input[type="email"] {
     }
   }
 
+  h4 {
+    font-family: $roboto-font;
+    font-size: $pop-up-font-size;
+    margin: 0;
+    font-weight: 500;
+    color: $menu-left-color;
+    margin-left: 10px;
+  }
+
   .user-label {
     margin-top: 15px;
     margin-left: 15px;
@@ -579,14 +656,16 @@ input[type="email"] {
       content: '';
       position: absolute;
       top: 0;
-      left: calc(0% + 4px);
+      // left: calc(0% + 4px);
+      left: 0;
+      right: auto;
       width: 0;
       height: 0;
       border: 6px solid transparent;
       border-bottom-color: $input-color;
       border-top: 0;
       border-left: 0;
-      margin-left: -4px;
+      // margin-left: -4px;
       margin-top: -5px;
     }
 
@@ -597,7 +676,9 @@ input[type="email"] {
 
     .customer:after {
       content: '';
-      left: calc(100% - 2px);
+      // left: calc(100% - 2px);
+      left: auto;
+      right: 0;
       border: 6px solid transparent;
       border-top-color: $Headline-color;
       border-right: 0;
@@ -614,11 +695,12 @@ input[type="email"] {
   .input {
     width: calc(100% - 100px);
     position: relative;
-    padding-left: 20px;
+
     // border-bottom: none;
 
     input {
       width: 100%;
+      padding-left: 30px;
     }
 
     img {
@@ -721,9 +803,15 @@ input[type="email"] {
 }
 
 .scroll-wrapper table {
-  width: 100%;
-  max-width: 100%;
+  width: 98%;
+  max-width: 98%;
 }
+
+// .d-input-support-class{
+//  position: relative;
+// width: 98%;
+// max-width: 98%;
+// }
 
 .menu-logo-bar {
   // z-index: 1;
@@ -765,12 +853,54 @@ input[type="email"] {
   // display: inline-flex;
 }
 
-// .user-info{
-//   height: 60px;
-//   width: 100%;
-//   border: none;
-//   display: flex;
-//   align-items: center;
-//   justify-content: left;
-//   position: relative;
-// }
+////////newpostback
+.space-betwen {
+  display: flex;
+  // flex-direction: column;
+  justify-content: space-between;
+  // margin: auto;
+  // width: 100%;
+
+  .box-text {
+    // display: flex;
+    // margin: auto;
+    // width: 100%;
+    padding: 15px;
+
+    h2 {
+      padding-left: 0;
+    }
+
+    textarea {
+      width: 100%;
+    }
+
+    select {
+      width: 100%;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-color: #ffffff;
+      border: 1px solid $input-color;
+      padding: 5px 80px 5px 10px;
+      font-size: 14px;
+      display: block;
+      border-radius: 0;
+      background-image: url(https://image.flaticon.com/icons/png/128/118/118738.png);
+      background-size: 15px auto;
+      background-repeat: no-repeat;
+      background-position: right 5px center;
+    }
+  }
+}
+
+.border-special-cell {
+  border: 1px solid $input-color;
+  ;
+}
+
+.box-special {
+  display: flex;
+  flex-direction: column;
+
+}

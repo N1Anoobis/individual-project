@@ -34,6 +34,25 @@
 @media(max-width: 767px) {
   @include grid('sm');
 
+  #personaldata>div>div>form>div>div {
+    // display: none;
+    margin: 0 auto;
+    // border: 1px red solid;
+    width: 70%;
+
+  }
+
+
+  .double-input {
+    width: 175px;
+
+    input.remove {
+      &:after {
+        content: none;
+      }
+    }
+  }
+
   .sidebar {
     overflow: scroll;
     height: 100%;
@@ -108,4 +127,5 @@
 
 @media(min-width: 1200px) {
   @include grid('xl');
+
 }

@@ -117,29 +117,49 @@ body {
   button {
     margin: 25px auto;
   }
-}
 
-.form {
-  width: 100%;
-  margin: auto;
-  border-top: 1px solid $input-color;
-  border-bottom: 1px solid $input-color;
-  padding: 40px;
 
-  div.input {
-    height: 40px;
+  .form {
+    width: 100%;
+    margin: auto;
+    border-top: 1px solid $input-color;
+    border-bottom: 1px solid $input-color;
+    // padding: 40px;
+
+    .form-section {
+      border-bottom: 1px solid $input-color;
+      min-width: 300px;
+      width: 100%;
+    }
+
+    div.input {
+      height: 40px;
+    }
+
+
+    .vessel {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 30%;
+      min-width: 290px;
+      // label{
+      //  display: inline-block;
+
+      // }
+      // .input{
+      // display: flex;
+      // justify-content: flex-end;
+      // display: none;
+      // margin-left: auto;
+      // }
+    }
   }
-}
-
-.vessel {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 30%;
 }
 
 /////////////////////////////////////////payout
 .payout-details {
+  // display: flex;
   margin: 20px auto;
   border-top: none;
   width: 97%;
@@ -153,6 +173,12 @@ body {
     border-top: none;
     background-color: $white-color;
     pointer-events: none;
+
+    h2 {
+      padding-left: 0;
+      font-size: 13px;
+      // font-weight: bold;
+    }
 
     div {
       height: 30px;
@@ -168,6 +194,7 @@ body {
   td,
   th {
     text-align: left;
+    border-bottom: 1px solid $input-color;
 
     &:last-child {
       text-align: center;

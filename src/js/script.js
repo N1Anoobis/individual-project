@@ -2,7 +2,9 @@ const menuBar = document.querySelector('.fa');
 
 function toggleMenu(visible) {
   if (document.documentElement.clientWidth < 767) {
+
     document.querySelector('.sidebar').classList.toggle('show', visible);
+
   }
 }
 
@@ -10,7 +12,7 @@ function menuBarDisapear() {
   if (document.documentElement.clientWidth > 767 && menuBar) {
     document.querySelector('.fa').classList.add('disapear');
   }
-  if (document.documentElement.clientWidth < 767 ) {
+  if (document.documentElement.clientWidth < 767) {
     document.querySelector('.fa').classList.remove('disapear');
   }
 }
@@ -46,21 +48,45 @@ window.addEventListener('load', function (e) {
   e.preventDefault();
   moveMenuElements();
   menuBarDisapear();
+  toggleMenu();
+  
+
 });
+
+// if (!document.querySelector('.sidebar').classList.contains('show')) 
+
 
 const pages = document.getElementById('pages').children;
 const links = document.querySelectorAll('li');
 const aLinks = document.querySelector('ul').querySelectorAll('a');
+initPage();
+function initPage() {
+  const idFromHash = window.location.hash.replace('#/', '');
+  
+  let pageMathingHash = pages[0].id;
 
-for (let link of links) {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    const clickedElement = e.target;
-    const id = clickedElement.getAttribute('href').replace('#', '');
-    activatePage(id);
-  });
+  for (let page of pages) {
+    if (page.id == idFromHash) {
+      pageMathingHash = page.id;
+      break;
+    }
+  }
+  activatePage(pageMathingHash);
+
+  for (let link of links) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const clickedElement = e.target;
+      const id = clickedElement.getAttribute('href').replace('#', '');
+      activatePage(id);
+
+      ///change URL hash
+      window.location.hash = '#/' + id;
+
+
+    });
+  }
 }
-activatePage(pages[0].id);
 
 function activatePage(pageId) {
   //add class active for page
