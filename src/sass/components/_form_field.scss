@@ -15,18 +15,6 @@ h3 {
   font-weight: 400;
 }
 
-.h3 {
-  padding-left: 20px;
-}
-
-// .underline {
-//   text-decoration: underline;
-// }
-
-.border {
-  color: $Headline-color;
-}
-
 h2 {
   font-family: $roboto-font;
   color: $Headline-color;
@@ -56,13 +44,8 @@ a {
 
 ///////////////svg
 img {
-  // width: 15px;
   transition: .3s;
   cursor: pointer;
-
-  //   &:hover{
-  //     filter: invert(56%) sepia(89%) saturate(792%) hue-rotate(360deg) brightness(101%) contrast(104%);
-
 }
 
 input[type="text"],
@@ -77,7 +60,7 @@ input[type="email"] {
   }
 }
 
-
+//checkboxes
 .label {
   display: block;
   position: relative;
@@ -153,27 +136,23 @@ input[type="email"] {
   border: 1px solid $input-color;
   transition: .3s;
   margin-right: 15px;
-  // padding-bottom: -1px;
-
 
   &:hover {
     border-color: $lighter-color;
   }
 
   &:hover input::-webkit-calendar-picker-indicator {
-    filter: invert(32%) sepia(11%) saturate(189%) hue-rotate(314deg) brightness(98%) contrast(84%);
+    filter: $gray-svg;
   }
 
   input {
     padding: 9px;
     width: 170px;
-
     margin: 0;
     border: none;
     outline-style: none;
     font-family: $roboto-font;
     font-weight: lighter;
-
   }
 
   input::-webkit-clear-button,
@@ -239,11 +218,6 @@ input[type="email"] {
   }
 }
 
-//line component
-.line {
-  border-bottom: 1px solid $lighter-color;
-}
-
 ////////////////nav
 .ul {
   padding: 0;
@@ -265,7 +239,7 @@ input[type="email"] {
         height: 14px;
         width: 16px;
         margin: 0 10px;
-        filter: invert(57%) sepia(7%) saturate(0%) hue-rotate(175deg) brightness(102%) contrast(98%);
+        filter: $light-gray-svg;
       }
     }
 
@@ -275,7 +249,7 @@ input[type="email"] {
     }
 
     &:hover img {
-      filter: invert(100%) sepia(7%) saturate(23%) hue-rotate(259deg) brightness(121%) contrast(100%);
+      filter: $white-svg;
     }
 
     &:hover a {
@@ -284,7 +258,6 @@ input[type="email"] {
     }
   }
 }
-
 
 //////////singups
 .tab {
@@ -304,128 +277,92 @@ input[type="email"] {
   }
 }
 
-.active {
-  background-color: $tab-bacgr-color;
-}
-
 ////////////table
 .table {
   border-collapse: collapse;
-  border-top: 1px solid $input-color;
+  // border-top: 1px solid $input-color;
+  margin: 30px auto;
+
+  h3 {
+    margin: 20px 0;
+    color: $lighter-color;
+  }
+
+  .support-payput-class {
+    // display: none;
+    border-top: none;
+    background-color: $white-color;
+    pointer-events: none;
+    // margin-top: 0px;
+
+    h2 {
+      padding-left: 0;
+      font-size: 13px;
+      // color: $lighter-color;
+    }
+
+    div {
+      height: 30px;
+      z-index: 1;
+      pointer-events: all;
+    }
+
+    &:hover {
+      background-color: $white-color;
+    }
+  }
+
+  td,
+  th {
+    text-align: left;
+    // border-bottom: 1px solid $input-color;
+    padding: 0;
+
+    &:last-child {
+      text-align: center;
+    }
+  }
 
   tr {
     transition: .3s;
     border-bottom: 1px solid $input-color;
+    border-top: 1px solid $input-color;
 
     img {
-      filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(53deg) brightness(112%) contrast(101%);
+      filter: $white-svg;
     }
 
     &:hover {
       background-color: $tab-bacgr-color;
 
-      img {
-        filter: invert(56%) sepia(100%) saturate(564%) hue-rotate(358deg) brightness(99%) contrast(108%);
+      .link {
+        filter: $orange-svg;
+      }
+
+      .bin {
+        filter: $black-svg;
       }
     }
-
-    &:hover .bin {
-      filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(213deg) brightness(102%) contrast(106%);
-    }
   }
 }
-
-//table links
-.space-between {
-  tr {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    td a {
-      margin-right: 15px;
-    }
-  }
-}
-
 // table numbers
 .numbers {
   border-top: none;
   font-family: $roboto-font;
   font-weight: lighter;
 
+  h2 {
+    margin: 20px;
+    width: 150px;
+    padding: 0;
+  }
+
   td {
     margin-bottom: -10px;
   }
 }
-
-//icon-top
-.icon {
-  width: 15px;
-  // height: 60px;
-  // border: 1px $input-color solid;
-  // border-top: none;
-  // border-right: none;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // transition: .2s;
-  // position: relative;
-  // border-bottom: none;
-
-  // .little-dot {
-  //   height: 6px;
-  //   width: 6px;
-  //   background-color: $button-color;
-  //   border-radius: 50%;
-  //   position: absolute;
-  //   left: 31px;
-  //   top: 20px;
-  // }
-
-  // &:hover {
-  //   background-color: $tab-bacgr-color;
-  // }
-}
-
-//blue-text
-
-
-.blue-text {
-  p {
-    font-family: $roboto-font;
-    margin-left: 10px;
-    color: $dot-color;
-    padding-right: 10px;
-  }
-}
-
-
-/// menu-logo-bar
-.menu-logo-bar {
-  justify-content: space-around;
-
-  &:hover {
-    background-color: transparent;
-  }
-
-  .logo {
-    color: $white-color;
-    font-family: $special-font;
-    font-size: $button-font-size;
-  }
-
-  i {
-    color: $Headline-color;
-    font-size: $button-font-size;
-  }
-}
-
 //menager
 .user-info {
-  // justify-content: left;
-  // pointer-events: none;
-  // border-left: none;
   height: 60px;
   width: 100%;
   border: none;
@@ -433,7 +370,6 @@ input[type="email"] {
   align-items: center;
   justify-content: left;
   position: relative;
-
 
   img {
     width: 43px;
@@ -467,19 +403,17 @@ input[type="email"] {
   width: 40px;
 
   img {
-    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(53deg) brightness(112%) contrast(101%);
+    filter: $white-svg;
   }
 }
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-
 .date-switch {
   display: inline-flex;
   align-items: center;
   background-color: $white-color;
   border-radius: 3px;
   padding: 5px 10px;
-  color: $Headline-color;
+  color: $paragraph-color;
   transition: .3s;
 
   &:hover {
@@ -488,25 +422,23 @@ input[type="email"] {
 
     img {
       padding-left: 4px;
-      filter: invert(46%) sepia(0%) saturate(32%) hue-rotate(238deg) brightness(95%) contrast(111%);
+      filter: $gray-svg;
     }
   }
 
   h3 {
     padding-right: 4px;
-    color: $input-color;
+    color: $paragraph-color;
     font-weight: bold;
     font-size: 13px;
   }
 
   img {
     padding-left: 4px;
-    filter: invert(100%) sepia(1%) saturate(7500%) hue-rotate(31deg) brightness(97%) contrast(116%);
+    filter: $white-svg;
   }
 }
-
 ///////////////////////////////////////////////////
-
 .pagination {
   display: inline-flex;
   margin: 30px auto;
@@ -656,7 +588,6 @@ input[type="email"] {
       content: '';
       position: absolute;
       top: 0;
-      // left: calc(0% + 4px);
       left: 0;
       right: auto;
       width: 0;
@@ -665,7 +596,6 @@ input[type="email"] {
       border-bottom-color: $input-color;
       border-top: 0;
       border-left: 0;
-      // margin-left: -4px;
       margin-top: -5px;
     }
 
@@ -676,7 +606,6 @@ input[type="email"] {
 
     .customer:after {
       content: '';
-      // left: calc(100% - 2px);
       left: auto;
       right: 0;
       border: 6px solid transparent;
@@ -695,8 +624,6 @@ input[type="email"] {
   .input {
     width: calc(100% - 100px);
     position: relative;
-
-    // border-bottom: none;
 
     input {
       width: 100%;
@@ -717,14 +644,11 @@ input[type="email"] {
     }
 
     &:focus {
-      // background-image: none;
       text-indent: 0px;
     }
   }
-
   ////////////////////////////////////////////password
   .password {
-
     display: flex;
     justify-content: space-evenly;
     padding: 40px 0;
@@ -739,6 +663,167 @@ input[type="email"] {
       text-align: center;
       display: inline;
     }
+  }
+}
+
+.menu-logo-bar {
+  background-color: $menu-left-color;
+  margin-right: auto;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  color: white;
+
+  .logo {
+    color: $white-color;
+    font-family: $special-font;
+    font-size: $button-font-size;
+    margin: auto;
+    padding-left: 45px;
+    padding: 0;
+  }
+
+  i {
+    color: $Headline-color;
+    font-size: $button-font-size;
+    font-size: 35px;
+    margin-right: 5%;
+  }
+
+  &:hover {
+    background-color: $menu-left-color;
+  }
+}
+
+.cell-top-nav {
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border: 1px #E3E3E3 solid;
+  border-top: none;
+  border-right: none;
+  transition: .3s;
+
+  &:hover {
+    background-color: $input-color;
+  }
+
+  &:nth-child(2) {
+    position: relative;
+  }
+
+  img {
+    margin: 8px;
+  }
+}
+
+////////newpostback
+.space-betwen {
+  display: flex;
+  justify-content: space-between;
+ 
+  .box-text {
+    padding: 15px;
+
+    h2 {
+      padding-left: 0;
+    }
+
+    textarea {
+      width: 100%;
+    }
+
+    select {
+      width: 100%;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-color: #ffffff;
+      border: 1px solid $input-color;
+      padding: 5px 80px 5px 10px;
+      font-size: 14px;
+      display: block;
+      border-radius: 0;
+      background-image: url(https://image.flaticon.com/icons/png/128/118/118738.png);
+      background-size: 15px auto;
+      background-repeat: no-repeat;
+      background-position: right 5px center;
+    }
+  }
+}
+
+.create-pxl {
+  margin: 20px 20px 20px auto;
+}
+
+.border-special-cell {
+  border: 1px solid $input-color;
+  ;
+}
+
+.box-special {
+  display: flex;
+  flex-direction: column;
+}
+///////////////////////////////slider
+.slider {
+  position: relative;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  background: $activ-link-color;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  position: relative;
+  top: 10px;
+  -webkit-appearance: none;
+  width: 0px;
+  height: 0px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid $activ-link-color;
+  transform: translateX(-15px);
+  cursor: pointer;
+}
+
+///support classes
+.active {
+  background-color: $tab-bacgr-color;
+}
+
+.h3 {
+  padding-left: 20px;
+}
+
+.border {
+  color: $Headline-color;
+}
+
+.line {
+  border-bottom: 1px solid $lighter-color;
+}
+
+//icon-top
+.icon {
+  width: 15px;
+}
+//blue-text
+.blue-text {
+  p {
+    font-family: $roboto-font;
+    margin-left: 10px;
+    color: $dot-color;
+    padding-right: 10px;
   }
 }
 
@@ -805,102 +890,4 @@ input[type="email"] {
 .scroll-wrapper table {
   width: 98%;
   max-width: 98%;
-}
-
-// .d-input-support-class{
-//  position: relative;
-// width: 98%;
-// max-width: 98%;
-// }
-
-.menu-logo-bar {
-  // z-index: 1;
-  background-color: $menu-left-color;
-  margin-right: auto;
-  display: flex;
-  height: 60px;
-  align-items: center;
-  justify-content: space-around;
-  color: white;
-
-  &:hover {
-    background-color: $menu-left-color;
-  }
-}
-
-.cell-top-nav {
-  display: flex;
-  height: 60px;
-  justify-content: center;
-  align-items: center;
-  border: 1px #E3E3E3 solid;
-  border-top: none;
-  border-right: none;
-  transition: .3s;
-
-  &:hover {
-    background-color: $input-color;
-  }
-
-  &:nth-child(2) {
-    position: relative;
-  }
-
-  img {
-    margin: 8px;
-  }
-
-  // display: inline-flex;
-}
-
-////////newpostback
-.space-betwen {
-  display: flex;
-  // flex-direction: column;
-  justify-content: space-between;
-  // margin: auto;
-  // width: 100%;
-
-  .box-text {
-    // display: flex;
-    // margin: auto;
-    // width: 100%;
-    padding: 15px;
-
-    h2 {
-      padding-left: 0;
-    }
-
-    textarea {
-      width: 100%;
-    }
-
-    select {
-      width: 100%;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      background-color: #ffffff;
-      border: 1px solid $input-color;
-      padding: 5px 80px 5px 10px;
-      font-size: 14px;
-      display: block;
-      border-radius: 0;
-      background-image: url(https://image.flaticon.com/icons/png/128/118/118738.png);
-      background-size: 15px auto;
-      background-repeat: no-repeat;
-      background-position: right 5px center;
-    }
-  }
-}
-
-.border-special-cell {
-  border: 1px solid $input-color;
-  ;
-}
-
-.box-special {
-  display: flex;
-  flex-direction: column;
-
 }

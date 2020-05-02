@@ -1,7 +1,7 @@
 @import "variables";
 @import "mixins";
 @import "normalize";
-@import "layout";
+
 
 /* Components */
 @import "components/form_field";
@@ -11,3 +11,4 @@
 
 /* Pages / Views */
 @import "pages/registration";
+@import "layout";

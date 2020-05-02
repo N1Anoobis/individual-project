@@ -20,31 +20,73 @@
 }
 
 //////////////////
-
-@mixin grid($prefix) {
-  @for $i from 1 through 12 {
-    .col-#{$prefix}-#{$i} {
-      $width: 100% / 12 * $i;
-      flex: 0 0 $width;
-      max-width: $width;
-    }
-  }
-}
-
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   @include grid('sm');
 
-  #personaldata>div>div>form>div>div {
-    // display: none;
-    margin: 0 auto;
-    // border: 1px red solid;
-    width: 70%;
+  .space-betwen {
+    flex-direction: column;
+    align-items: center;
 
+    // width: 90%;
+    .box-text {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      // margin: 0 auto;
+      align-items: center;
+
+      textarea,
+      select {
+        width: 70vw;
+      }
+    }
   }
 
+  #personaldata>div>div>form>div>div {
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  .icon-only {
+    height: 40px;
+    margin-top: 17px;
+  }
+
+  .menu-logo-bar {
+    .logo {
+      padding-left: 45px;
+    }
+  }
+
+  .box {
+    flex-direction: column;
+  }
+
+  table {
+    tr .bin {
+      filter: $black-svg;
+      margin-left: 10px;
+    }
+
+    tr .link {
+      filter: $orange-svg;
+      margin-right: 10px;
+    }
+
+    h2 {
+      padding-left: 0;
+    }
+  }
 
   .double-input {
     width: 175px;
+    position: relative;
+
+    input::-webkit-calendar-picker-indicator {
+      position: absolute;
+      top: 30px;
+      left: 130px;
+    }
 
     input.remove {
       &:after {
@@ -54,7 +96,6 @@
   }
 
   .sidebar {
-    overflow: scroll;
     height: 100%;
     padding-bottom: 30px;
   }
@@ -78,20 +119,14 @@
 
     .content-disapear-mobile {
       margin-top: 20px;
-      // flex-direction: column;
       align-items: center;
       background-color: $lighter-color;
-      // border-radius: 10%;
-
-      // &:hover{
-      //   background-color: red;
-
-      // }
-
+      width: 100vw;
 
       .cell-top-nav {
         border: none;
-        justify-content: start;
+        justify-content: center;
+        width: 25%;
 
         &:nth-child(2) {
           &:after {
@@ -101,24 +136,21 @@
 
         &:nth-child(1),
         &:nth-child(3) {
-          // display: none;
-          width: 30px;
-          overflow: hidden;
-
           div {
             display: none;
           }
 
+          img:nth-child(3) {
+            display: none;
+          }
         }
       }
-
     }
   }
 }
 
 @media(min-width: 768px) {
   @include grid('md');
-
 }
 
 @media(min-width: 992px) {
@@ -127,5 +159,4 @@
 
 @media(min-width: 1200px) {
   @include grid('xl');
-
 }
