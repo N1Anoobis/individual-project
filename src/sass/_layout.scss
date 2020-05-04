@@ -38,8 +38,23 @@
       textarea,
       select {
         width: 70vw;
+        font-family: $roboto-font;
+      }
+
+      .box-special {
+        width: 100%;
+        font-family: $roboto-font;
       }
     }
+
+    .range {
+      height: 80px;
+    }
+
+  }
+
+  .create-pxl {
+    margin: 20px auto;
   }
 
   #personaldata>div>div>form>div>div {
