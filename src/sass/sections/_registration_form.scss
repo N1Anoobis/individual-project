@@ -2,6 +2,17 @@ section {
   background-color: $tab-bacgr-color;
 }
 
+// div#pages {
+//   width: 100%;
+//   min-height: 100vh;
+//   padding: 10px;
+//   background-color: $tab-bacgr-color;
+//   margin-left:20%;
+//   margin-top: 50px;
+//   // margin-right: -20%;
+// margin-left: 20vw;
+// }
+
 .sidebar {
   background-color: $menu-left-color;
   position: fixed;
@@ -23,10 +34,6 @@ section {
   display: flex;
   justify-content: flex-end;
 }
-
-// #pages{
-//   margin-left: 20vw;
-// }
 
 .content {
   position: absolute;
@@ -77,6 +84,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 ////////////////////////////////////////////////
 .personal {
   button {
@@ -88,7 +96,7 @@ body {
     margin: auto;
     border-top: 1px solid $input-color;
     border-bottom: 1px solid $input-color;
-  
+
     .form-section {
       border-bottom: 1px solid $input-color;
       min-width: 300px;
@@ -108,4 +116,3 @@ body {
     }
   }
 }
-

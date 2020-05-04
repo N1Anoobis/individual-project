@@ -1,9 +1,13 @@
 const menuBar = document.querySelector('.fa');
+// console.log(menuBar)
 
 function toggleMenu(visible) {
   if (document.documentElement.clientWidth < 767) {
 
     document.querySelector('.sidebar').classList.toggle('show', visible);
+    //x for mobile menu
+    document.querySelector('.fa').classList.toggle('fa-times');
+    document.querySelector('.fa').classList.toggle('fa-bars');
   }
 }
 
@@ -54,9 +58,10 @@ const pages = document.getElementById('pages').children;
 const links = document.querySelectorAll('li');
 const aLinks = document.querySelector('ul').querySelectorAll('a');
 initPage();
+
 function initPage() {
   const idFromHash = window.location.hash.replace('#/', '');
-  
+
   let pageMathingHash = pages[0].id;
 
   for (let page of pages) {

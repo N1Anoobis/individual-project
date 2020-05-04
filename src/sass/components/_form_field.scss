@@ -62,10 +62,12 @@ input[type="email"] {
 
 //checkboxes
 .label {
-  display: block;
+  // display: block;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
+  // top: 38px;
+  padding: 30px;
+  padding-left: 60px;
+  // margin-bottom: 12px;
   cursor: pointer;
   font-size: 16px;
   font-weight: normal;
@@ -73,11 +75,25 @@ input[type="email"] {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  display: flex;
+  justify-content: space-between;
+  transition: .3s;
+
+  img {
+    width: 15px;
+    filter: $white-svg;
+    // display: none;
+
+  }
+}
+
+.label:hover img {
+  filter: $gray-svg;
 }
 
 /* Hide the browser's default checkbox */
 .label input {
-  position: absolute;
+  // position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
@@ -87,17 +103,17 @@ input[type="email"] {
 /* Create a custom checkbox */
 .checkmark {
   position: absolute;
-  top: 0;
-  left: 0;
+  // top: 27px;
+  left: 25px;
   height: 20px;
   width: 20px;
   background-color: #eee;
 }
 
 /* On mouse-over, add a grey background color */
-// .label:hover input ~ .checkmark {
-//   background-color: #ccc;
-// }
+.label:hover {
+  background-color: $input-color;
+}
 
 /* When the checkbox is checked, add a blue background */
 .label input:checked~.checkmark {
