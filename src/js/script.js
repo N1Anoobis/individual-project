@@ -102,3 +102,66 @@ function activatePage(pageId) {
   }
   toggleMenu();
 }
+//modal clouse//
+document.querySelectorAll('#overlay .js--close-modal').forEach(function (btn) {
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    closeModal();
+  });
+});
+
+document.querySelector('#overlay').addEventListener('click', function (e) {
+  if (e.target === this) {
+    closeModal();
+  }
+});
+
+document.addEventListener('keyup', function (e) {
+  if (e.keyCode === 27) {
+    closeModal();
+  }
+});
+
+function closeModal() {
+  document.getElementById('overlay').classList.remove('show');
+}
+
+//modal open//
+function openModal(modal) {
+  document.querySelectorAll('#overlay > *').forEach(function (modal) {
+    modal.classList.remove('show');
+  });
+  document.querySelector('#overlay').classList.add('show');
+  document.querySelector(modal).classList.add('show');
+}
+
+document.querySelector('.content-disapear-mobile  div:nth-child(4)').addEventListener('click', function () {
+
+  openModal('#myModal');
+});
+
+document.querySelector('.content-disapear-mobile  div:nth-child(3)').addEventListener('click', function () {
+
+  openModal('#login');
+});
+
+document.querySelector('.user-info').addEventListener('click', function () {
+
+  openModal('#chat');
+});
+
+const linkBnn = document.querySelectorAll('.btn-banner');
+for (const linkBn of linkBnn) {
+  linkBn.addEventListener('click', function () {
+
+    openModal('#add-banner');
+  });
+}
+
+const linkBtn = document.querySelectorAll('.btn-link');
+for (const linkB of linkBtn) {
+  linkB.addEventListener('click', function () {
+
+    openModal('#add-links');
+  });
+}

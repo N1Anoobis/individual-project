@@ -106,7 +106,7 @@
       </div>
       <div class="links section-shadow">
         <h2 class="h2">LINKS</h2>
-        <button class="btn"><i class="fa fa-plus"></i>add new</button>
+        <button class="btn btn-link"><i class="fa fa-plus"></i>add new</button>
         <div class="scroll-wrapper">
           <table class="table col-sm-8  col-md-8 col-lg-8 container">
             <tr>
@@ -191,7 +191,7 @@
             </tr>
           </table>
         </div>
-        <button class="btn"><i class="fa fa-plus"></i>add new</button>
+        <button class="btn btn-link"><i class="fa fa-plus"></i>add new</button>
 
       </div>
 
@@ -652,7 +652,7 @@
 
       <div class="links section-shadow">
         <h2 class="h2">LINKS</h2>
-        <button class="btn"><i class="fa fa-plus"></i>add new</button>
+        <button class="btn btn-link"><i class="fa fa-plus"></i>add new</button>
         <div class="scroll-wrapper">
           <table class="table col-sm-8  col-md-8 col-lg-8 container">
             <tr>
@@ -737,14 +737,14 @@
             </tr>
           </table>
         </div>
-        <button class="btn"><i class="fa fa-plus"></i>add new</button>
+        <button class="btn btn-link"><i class="fa fa-plus"></i>add new</button>
 
       </div>
     </section>
     <section id="banners" class="content col-sm-12 col-md-9 col-lg-10 container-fluid">
       <div class="links section-shadow">
         <h2 class="h2">BANNERS</h2>
-        <button class="btn"><i class="fa fa-plus"></i>add new</button>
+        <button class="btn btn-banner"><i class="fa fa-plus"></i>add new</button>
         <div class="scroll-wrapper">
           <table class="table col-sm-8  col-md-8 col-lg-8 container">
             <tr>
@@ -797,7 +797,7 @@
             </tr>
           </table>
         </div>
-        <button class="btn"><i class="fa fa-plus"></i>add new</button>
+        <button class="btn btn-banner"><i class="fa fa-plus"></i>add new</button>
 
       </div>
     </section>
@@ -968,7 +968,7 @@
     <section id="postback" class="content col-sm-12 col-md-9 col-lg-10 container-fluid">
 
       <div class="general section-shadow">
-        <h2>NEW POSTBACK</h2>
+        <h2 class="">NEW POSTBACK</h2>
         <h3 class="h3">You can insert some parameters in this postback:</h3>
         <article class="space-betwen">
           <div class="box-text col-sm-6 col-md-6 col-lg-6">
@@ -1068,6 +1068,527 @@
 
       </div>
     </section>
+  </div>
+  <div class="overlay" id="overlay">
+    <div class="modal" id="myModal">
+      
+  
+      <div class="modal-content width25andh2pading">
+        <h2>Do you really want to Quit?</h2>
+        <!-- <div class="btn-close js--close-modal">x</div> -->
+        <div class=" quit"> 
+        
+          <button class="btn inactive">Cancel</button>
+          <button class="btn js--close-modal">Quit</button>
+        </div>
+
+      </div>
+      
+    </div>
+
+    <div id="login" class="modal">
+
+      <div class="modal-content width50andh2pading">
+        <h2>LOGIN</h2>
+        <!-- <div class="btn-close js--close-modal">x</div> -->
+        <div class="box-input password">
+          <div class=" input">
+            <input type="text" placeholder="Login name">
+            <img src="/images/icons/login.svg" alt="">
+          </div>
+          <div class=" input">
+            <input type="text" placeholder="Password">
+            <img src="/images/icons/password.svg" alt="">
+          </div>
+          <button class="btn ">Enter</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="chat" class="modal">
+
+      <div class="modal-content width50andh2pading">
+        <h2>ONLINE CHAT WITH YOUR PERSONAL MANAGER<span class="close js--close-modal">&times;</span></h2>
+        <div class="user-label">
+          <img src="/images/Layer 9.png">
+          <div>
+            <h4>Mikhael E.</h4>
+            <div class="status green">online</div>
+  
+          </div>
+  
+        </div>
+        <div class="chat-area">
+  
+          <div class="speech-bubble">Hello. Can I help you?</div>
+  
+          <div class="speech-bubble customer">Hello! I would like to know about Postback.</div>
+  
+          <div class="speech-bubble">Ok. 5 min..</div>
+  
+        </div>
+  
+        <div class="box-input">
+          <div class=" input">
+            <input type="text" placeholder="Enter the message..">
+            <img src="/images/icons/message.svg" alt="">
+          </div>
+          <button class="btn ">Send</button>
+        </div>
+  
+      </div>
+    </div>
+
+
+
+    <div id="add-banner" class="modal">
+
+      <div class="modal-content width80andh2pading">
+        <h2>ADD BANNERS<span class="close js--close-modal">&times;</span></h2>
+        <article class="space-betwen">
+          <div class="box-text col-sm-5 col-md-5 col-lg-5">
+            <h2>Scheme name</h2>
+            <select name="" id=""></select>
+          </div>
+          <div class="box-text col-sm-5 col-md-5 col-lg-5">
+            <h2>Compain</h2>
+            <select name="" id=""></select>
+          </div>
+          <div class="box-text col-sm-1 col-md-2 col-lg-2">
+            <h2>Language</h2>
+            <select name="" id=""></select>
+          </div>
+        </article>
+        <div class="space-betwen">
+  
+          <div class="box-text col-sm-4 col-md-4 col-lg-4">
+            <h2>Postback type</h2>
+            <select name="" id="">
+              <option value="item-1">Item 1</option>
+              <option value="item-2">Item 2</option>
+              <option value="item-3">Item 3</option>
+              <option value="item-4">Item 4</option>
+              <option value="item-5">Item 5</option>
+            </select>
+          </div>
+          <div class="box-text col-sm-4 col-md-4 col-lg-4">
+            <h2>To countries</h2>
+            <select name="" id="">
+              <option value="item-1">Item 1</option>
+              <option value="item-2">Item 2</option>
+              <option value="item-3">Item 3</option>
+              <option value="item-4">Item 4</option>
+              <option value="item-5">Item 5</option>
+            </select>
+          </div>
+          <div class="box-text col-sm-4 col-md-4 col-lg-4">
+            <h2>Sending options:</h2>
+            <select name="" id="3">
+              <option value="item-3">Item 3</option>
+            </select>
+          </div>
+        </div>
+        <article class="space-betwen">
+          <div class="box-text border-special-cell col-sm-9 col-md-6 col-lg-6">
+            <h2>send statuses</h2>
+            <div class="box-special scroll">
+              <label class="label">checkNumber
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noAnswer
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noCall
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">callAgain
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">checkNumber
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noAnswer
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noCall
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">callAgain
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+            </div>
+          </div>
+          <div class="box-text border-special-cell col-sm-9 col-md-6 col-lg-6">
+            <h2>Send after</h2>
+            <div class="box-special scroll">
+              <label class="label">checkNumber
+                <input type="checkbox" >
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noAnswer
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noCall
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">callAgain
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">checkNumber
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noAnswer
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noCall
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">callAgain
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+            </div>
+          </div>
+        </article>
+  
+        <div class="box-input">
+          <div class=" input">
+            <input type="text" placeholder="Enter the message..">
+            <img src="/images/icons/message.svg" alt="">
+          </div>
+          <button class="btn inactive">Copy link</button>
+          <button class="btn ">Send</button>
+        </div>
+  
+      </div>
+    </div>
+
+
+
+    <div id="add-links" class="modal">
+
+      <div class="modal-content width80andh2pading">
+        <h2>ADD LINKS<span class="close js--close-modal">&times;</span></h2>
+        <article class="space-betwen">
+          <div class="box-text col-sm-5 col-md-5 col-lg-5">
+            <h2>Scheme name</h2>
+            <select name="" id=""></select>
+          </div>
+          <div class="box-text col-sm-5 col-md-5 col-lg-5">
+            <h2>Compain</h2>
+            <select name="" id=""></select>
+          </div>
+          <div class="box-text col-sm-1 col-md-2 col-lg-2">
+            <h2>Language</h2>
+            <select name="" id=""></select>
+          </div>
+        </article>
+        <article class="space-betwen scroll">
+          <div class="box-text col-sm-9 col-md-4 col-lg-4">
+            <h2>send statuses</h2>
+            <div class="box-special">
+              <label class="label">1start
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noAnswer
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noCall
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">callAgain
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">checkNumber
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noAnswer
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noCall
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">callAgain
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">checkNumber
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noAnswer
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noCall
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">callAgain
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">checkNumber
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noAnswer
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noCall
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">1end
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+            </div>
+          </div>
+
+          
+          <div class="box-text col-sm-9 col-md-4 col-lg-4">
+            <h2>Send after</h2>
+            <div class="box-special">
+              <label class="label">2start
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noAnswer
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noCall
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">callAgain
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">checkNumber
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noAnswer
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noCall
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">callAgain
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">checkNumber
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noAnswer
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noCall
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">callAgain
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">checkNumber
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noAnswer
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noCall
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">2end
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+            </div>
+          </div>
+
+          <div class="box-text col-sm-9 col-md-4 col-lg-4">
+            <h2>Send after</h2>
+            <div class="box-special">
+              <label class="label">3start
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noAnswer
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noCall
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">callAgain
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">checkNumber
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noAnswer
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noCall
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">callAgain
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">checkNumber
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noAnswer
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noCall
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">callAgain
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">checkNumber
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noAnswer
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">noCall
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+              <label class="label">3end
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <img src="/images/icons/show.svg" alt="">
+              </label>
+            </div>
+          </div>
+        </article>
+  
+        <div class="box-input">
+          <div class=" input">
+            <input type="text" placeholder="Enter the message..">
+            <img src="/images/icons/message.svg" alt="">
+          </div>
+          <button class="btn inactive">Copy link</button>
+          <button class="btn ">Send</button>
+        </div>
+  
+      </div>
+    </div>
+
+
+
   </div>
   <script src="/js/script.js"></script>
 </body>

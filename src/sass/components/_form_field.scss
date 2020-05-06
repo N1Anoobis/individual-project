@@ -62,12 +62,9 @@ input[type="email"] {
 
 //checkboxes
 .label {
-  // display: block;
   position: relative;
-  // top: 38px;
-  padding: 30px;
+  padding: 20px;
   padding-left: 60px;
-  // margin-bottom: 12px;
   cursor: pointer;
   font-size: 16px;
   font-weight: normal;
@@ -79,16 +76,18 @@ input[type="email"] {
   justify-content: space-between;
   transition: .3s;
 
+  &:hover img {
+    filter: $gray-svg;
+  }
+
   img {
     width: 15px;
     filter: $white-svg;
-    // display: none;
 
+    &:hover {
+      filter: $orange-svg;
+    }
   }
-}
-
-.label:hover img {
-  filter: $gray-svg;
 }
 
 /* Hide the browser's default checkbox */
@@ -499,27 +498,27 @@ input[type="email"] {
 
 //////////////////////////////modal
 /* The Modal (background) */
-.modal {
-  // display: none; /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  padding-top: 100px;
-  /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0);
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.7);
-  /* Black w/ opacity */
-}
+// .modal {
+//   // display: none; /* Hidden by default */
+//   position: fixed;
+//   /* Stay in place */
+//   z-index: 9999;
+//   /* Sit on top */
+//   padding-top: 100px;
+//   /* Location of the box */
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   /* Full width */
+//   height: 100%;
+//   /* Full height */
+//   overflow: auto;
+//   /* Enable scroll if needed */
+//   background-color: rgb(0, 0, 0);
+//   /* Fallback color */
+//   background-color: rgba(0, 0, 0, 0.7);
+//   /* Black w/ opacity */
+// }
 
 /* Modal Content */
 .modal-content {
@@ -688,6 +687,56 @@ input[type="email"] {
   }
 }
 
+.overlay {
+  // box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  justify-content: center;
+  align-items: center;
+
+  overflow: auto;
+  padding: 30px;
+
+  display: none;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.overlay::webkit-scrollbar {
+  display: none;
+}
+
+.modal {
+  // max-width: 600px;
+  margin: auto;
+  background-color: #ffffff;
+  position: relative;
+  width: auto;
+
+  display: none;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+}
+
+/////////////////////////////////////
 .menu-logo-bar {
   background-color: $menu-left-color;
   margin-right: auto;
@@ -883,6 +932,48 @@ input[type="email"] {
 }
 
 ////////////////helper classes for modal size
+.width80andh2pading {
+
+  width: 100%;
+  min-width: 80vw;
+
+  h2 {
+    padding: 10px;
+  }
+
+  &:last-child .space-betwen {
+    h2 {
+      border-bottom: none;
+    }
+
+    .box-special {
+      height: 400px;
+
+    }
+  }
+
+  .box-input {
+    justify-content: space-between;
+
+    .input {
+      width: calc(100% - 250px);
+    }
+  }
+
+  .scroll {
+    height: auto;
+  }
+
+  .space-betwen.scroll>div:nth-child(2),
+  .space-betwen.scroll>div:nth-child(3) {
+    h2 {
+      color: transparent;
+      // margin-top: 137px;
+    }
+  }
+
+}
+
 .width50andh2pading {
 
   width: 50%;
@@ -895,7 +986,7 @@ input[type="email"] {
 
 .width25andh2pading {
   width: 25%;
-  min-width: 250px;
+  min-width: 285px;
 
   h2 {
     padding: 20px 15px;
