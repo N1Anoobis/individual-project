@@ -739,11 +739,14 @@ input[type="email"] {
 /////////////////////////////////////
 .menu-logo-bar {
   background-color: $menu-left-color;
-  margin-right: auto;
+  // margin-right: auto;
   display: flex;
-  height: 60px;
+  height: 40px;
   align-items: center;
+  justify-content: center;
   color: white;
+  margin: 0 auto;
+  padding-top: 20px;
 
   .logo {
     color: $white-color;
@@ -880,6 +883,7 @@ input[type="email"] {
   opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
+  
 }
 
 .slider:hover {
@@ -897,6 +901,19 @@ input[type="email"] {
   border-bottom: 20px solid $activ-link-color;
   transform: translateX(0);
   cursor: pointer;
+}
+
+.range {
+  position: relative;
+}
+
+.slider-value {
+  position: absolute;
+  transform: translateX(-50%);
+  top: 20px;
+  left: 50%;
+  // transform: translateX(-10%);
+  // display: none;
 }
 
 ///support classes
@@ -1017,9 +1034,11 @@ input[type="email"] {
 }
 
 //////////////////////
-.show {
-  display: block;
-  z-index: 1;
+.menu-mobile {
+  display: none;
+  height: 0;
+  opacity: 0;
+  z-index: 0;
 }
 
 .disapear {

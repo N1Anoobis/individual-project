@@ -1,27 +1,54 @@
 const menuBar = document.querySelector('.fa');
-// console.log(menuBar)
+// const menuBarLogo = document.querySelector('.menu-logo-bar');
+
+let mobileMenuOpen = false;
+console.log(menuBar.clientWidth);
+console.log(document.documentElement.clientWidth);
 
 function toggleMenu(visible) {
   if (document.documentElement.clientWidth < 767) {
 
-    document.querySelector('.sidebar').classList.toggle('show', visible);
-    //x for mobile menu
+    document.querySelector('.hamburger-content').classList.toggle('menu-mobile', visible);
+    // document.querySelector('.hamburger-content').classList.toggle('disapear', visible);
+    console.log('znika');
+    //x for mobile men
+
     document.querySelector('.fa').classList.toggle('fa-times');
     document.querySelector('.fa').classList.toggle('fa-bars');
+
+
   }
+
 }
 
 function menuBarDisapear() {
-  if (document.documentElement.clientWidth > 767 && menuBar) {
+  // console.log(mobileMenuOpen)
+  if (document.documentElement.clientWidth > 750) {
+    // console.log('tosie wykonuje tylko raz');
     document.querySelector('.fa').classList.add('disapear');
+    // document.querySelector('.hamburger-content').classList.remove('menu-mobile');
+
   }
-  if (document.documentElement.clientWidth < 767) {
+  if (document.documentElement.clientWidth < 750) {
+
     document.querySelector('.fa').classList.remove('disapear');
+
   }
+  if (document.documentElement.clientWidth > 750 && mobileMenuOpen == false) {
+
+    document.querySelector('.hamburger-content').classList.remove('menu-mobile');
+  }
+  if (document.documentElement.clientWidth < 750 && mobileMenuOpen == false) {
+    //  console.log('wykonalo')
+    document.querySelector('.hamburger-content').classList.add('menu-mobile');
+  }
+
 }
 //listiner for toggleMenu
 document.querySelector('.fa').addEventListener('click', function (e) {
   e.preventDefault();
+  ////booliantoggle
+  mobileMenuOpen = !mobileMenuOpen;
   toggleMenu();
 });
 
@@ -45,13 +72,16 @@ window.addEventListener('resize', function (e) {
   e.preventDefault();
   moveMenuElements();
   menuBarDisapear();
+  console.log(mobileMenuOpen);
 });
 
 window.addEventListener('load', function (e) {
   e.preventDefault();
+  toggleMenu();
   moveMenuElements();
   menuBarDisapear();
-  toggleMenu();
+
+
 });
 
 const pages = document.getElementById('pages').children;
@@ -165,3 +195,23 @@ for (const linkB of linkBtn) {
     openModal('#add-links');
   });
 }
+////////////////////slider
+const slider = document.querySelector('.slider');
+console.log(slider);
+const sliderValue = document.querySelector('.slider-value');
+
+
+slider.addEventListener('input', (e) => {
+  console.log(e.target.value);
+  sliderValue.textContent = e.target.value;
+
+  sliderValue.style.left = `${e.target.value}%`;
+
+  if (e.target.value < 50) {
+    sliderValue.style.transform = `translateX(-45%)`;
+  }
+
+  if (e.target.value > 50) {
+    sliderValue.style.transform = `translateX(-90%)`;
+  }
+});
