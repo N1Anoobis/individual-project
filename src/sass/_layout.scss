@@ -30,22 +30,12 @@
 
     .space-betwen.scroll {
       height: 500px;
-      // &::-webkit-scrollbar{
-      //   width: 30px;
 
-      // }
       .box-text {
         .box-special {
           height: auto;
         }
       }
-
-      // article:nth-child(4).space-betwen {
-
-      //   .box-special {
-      //     // min-height: 400px;
-      //     // height: auto;
-      //   }
     }
 
     .scroll {
@@ -58,7 +48,6 @@
       flex-direction: column;
       align-items: center;
 
-      // justify-content: space-between;
       .input,
       .btn {
         width: 70%;
@@ -66,14 +55,12 @@
       }
 
       .input {
-        // width: calc(100% - 250px);
         margin: 0;
       }
     }
   }
 
   .width50andh2pading {
-
     width: 50vw;
     min-width: 320px;
 
@@ -91,19 +78,22 @@
         margin-top: 3px;
       }
     }
+  }
 
+  .border-special-cell {
+    border-left: none;
+    border-right: none;
   }
 
   .space-betwen {
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
 
-    // width: 90%;
     .box-text {
       display: flex;
       width: 100%;
       flex-direction: column;
-      // margin: 0 auto;
       align-items: center;
 
       textarea,
@@ -140,7 +130,6 @@
   .menu-logo-bar {
     height: 70px;
     padding-left: 45px;
-    // padding-right: auto;
     padding-bottom: 20px;
   }
 
@@ -187,36 +176,18 @@
   }
 
   .sidebar {
-
     width: 100%;
     height: auto;
-    // padding-bottom: 30px;
-    // overflow-y: scroll;
-    // overflow-x: hidden;
-    // height: 60px;
-    // z-index: 8;
-    // .logo {
-    // position: fixed;
     z-index: 9;
-    // i{
-    // z-index: 999;
-    // }
-    // }
   }
 
   .hamburger-content {
-
-    // display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 3999;
-
     overflow-y: scroll;
-    // overflow-x: hidden;
-    // opacity: 0;
     height: calc(100vh - 60px);
 
-    // position: absolute;
     .user-info {
       transform: translateX(calc(50% - 70px));
     }
@@ -234,15 +205,17 @@
       width: 100%;
     }
 
+    h2 {
+      text-align: center;
+    }
+
     .content-disapear-mobile {
-      // display: inline-block;
       margin-top: 20px;
       align-items: center;
       justify-content: center;
       background-color: $lighter-color;
       width: 100%;
       height: 60px;
-      // position: sticky;
 
       .cell-top-nav {
         border: none;

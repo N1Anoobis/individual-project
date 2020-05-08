@@ -1,49 +1,54 @@
 const menuBar = document.querySelector('.fa');
-// const menuBarLogo = document.querySelector('.menu-logo-bar');
 
 let mobileMenuOpen = false;
-console.log(menuBar.clientWidth);
-console.log(document.documentElement.clientWidth);
 
 function toggleMenu(visible) {
-  if (document.documentElement.clientWidth < 767) {
+  if (document.documentElement.clientWidth < 757) {
 
     document.querySelector('.hamburger-content').classList.toggle('menu-mobile', visible);
-    // document.querySelector('.hamburger-content').classList.toggle('disapear', visible);
-    console.log('znika');
     //x for mobile men
-
     document.querySelector('.fa').classList.toggle('fa-times');
     document.querySelector('.fa').classList.toggle('fa-bars');
-
-
   }
-
 }
 
 function menuBarDisapear() {
-  // console.log(mobileMenuOpen)
-  if (document.documentElement.clientWidth > 750) {
-    // console.log('tosie wykonuje tylko raz');
+  if (document.documentElement.clientWidth > 752) {
     document.querySelector('.fa').classList.add('disapear');
-    // document.querySelector('.hamburger-content').classList.remove('menu-mobile');
-
   }
-  if (document.documentElement.clientWidth < 750) {
-
+  if (document.documentElement.clientWidth < 753) {
     document.querySelector('.fa').classList.remove('disapear');
-
   }
-  if (document.documentElement.clientWidth > 750 && mobileMenuOpen == false) {
-
+  if (document.documentElement.clientWidth > 752 && mobileMenuOpen == false) {
     document.querySelector('.hamburger-content').classList.remove('menu-mobile');
+
   }
-  if (document.documentElement.clientWidth < 750 && mobileMenuOpen == false) {
-    //  console.log('wykonalo')
+  if (document.documentElement.clientWidth < 753 && mobileMenuOpen == false) {
     document.querySelector('.hamburger-content').classList.add('menu-mobile');
+
+    if (menuBar.classList.contains('fa-times')) {
+      document.querySelector('.fa').classList.remove('fa-times');
+      document.querySelector('.fa').classList.add('fa-bars');
+    }
+  }
+  if (document.documentElement.clientWidth > 752 && mobileMenuOpen == true) {
+    document.querySelector('.hamburger-content').classList.remove('menu-mobile');
+
+
+  }
+  if (document.documentElement.clientWidth < 753 && mobileMenuOpen == true) {
+    document.querySelector('.hamburger-content').classList.remove('menu-mobile');
+
+    // if (menuBar.classList.contains('fa-bars')) {
+    //   document.querySelector('.fa').classList.add('fa-times');
+    //   document.querySelector('.fa').classList.remove('fa-bars');
+    // }
+
   }
 
 }
+
+const allA = document.querySelectorAll('.ul a');
 //listiner for toggleMenu
 document.querySelector('.fa').addEventListener('click', function (e) {
   e.preventDefault();
@@ -52,17 +57,29 @@ document.querySelector('.fa').addEventListener('click', function (e) {
   toggleMenu();
 });
 
+
+
+for (const all of allA) {
+  all.addEventListener('click', function (e) {
+    e.preventDefault();
+    mobileMenuOpen = false;
+  });
+}
+
+
+
+
 function moveMenuElements() {
   const content = document.querySelector('.top-bar').querySelector('.content-disapear-mobile');
 
   let windowSize = document.documentElement.clientWidth;
   const newContent = document.querySelector('.hamburger-content').querySelector('.content-disapear-mobile ');
 
-  if (windowSize < 750 && content) {
+  if (windowSize < 752 && content) {
 
     document.querySelector('.hamburger-content').appendChild(content);
   }
-  if (windowSize > 750 && newContent) {
+  if (windowSize > 752 && newContent) {
 
     document.querySelector('.top-bar').appendChild(newContent);
   }
@@ -72,7 +89,7 @@ window.addEventListener('resize', function (e) {
   e.preventDefault();
   moveMenuElements();
   menuBarDisapear();
-  console.log(mobileMenuOpen);
+
 });
 
 window.addEventListener('load', function (e) {
@@ -197,21 +214,62 @@ for (const linkB of linkBtn) {
 }
 ////////////////////slider
 const slider = document.querySelector('.slider');
-console.log(slider);
 const sliderValue = document.querySelector('.slider-value');
-
-
 slider.addEventListener('input', (e) => {
-  console.log(e.target.value);
-  sliderValue.textContent = e.target.value;
+
+  sliderValue.textContent = e.target.value + 'hours';
 
   sliderValue.style.left = `${e.target.value}%`;
 
-  if (e.target.value < 50) {
-    sliderValue.style.transform = `translateX(-45%)`;
+  if (e.target.value < 25) {
+    sliderValue.style.transform = `translateX(-20%)`;
+  }
+  if (e.target.value > 26 && e.target.value < 76) {
+    sliderValue.style.transform = `translateX(-55%)`;
   }
 
-  if (e.target.value > 50) {
+  if (e.target.value > 75) {
     sliderValue.style.transform = `translateX(-90%)`;
   }
 });
+
+
+var ctx = document.getElementById('myChart').getContext('2d');
+/* eslint-disable */
+var chart = new Chart(ctx, { 
+  
+  // 1
+  type: 'bar',
+  data: {
+    // 2
+    labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'],
+    // 3
+    datasets: [{
+      // 4
+      label: 'Signups',
+      // 5
+      backgroundColor: '#8DBEC8',
+      borderColor: '#8DBEC8',
+      // 6
+      data: [52, 51, 41, 94, 26, 6, 72, 9, 21, 88],
+    },
+    {
+      label: 'FTD',
+      backgroundColor: '#F29E4E',
+      borderColor: '#F29E4E',
+      data: [6, 72, 1, 0, 47, 11, 50, 44, 63, 76],
+    },
+    {
+      label: 'Earned',
+      backgroundColor: '#71B374',
+      borderColor: '#71B374',
+      data: [59, 49, 68, 90, 67, 41, 13, 38, 48, 48],
+      // 7
+      hidden: true,
+    }
+    ]
+  },
+});
+
+
+// console.log(chart);

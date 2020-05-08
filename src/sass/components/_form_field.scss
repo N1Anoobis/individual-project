@@ -38,7 +38,6 @@ a {
 
   &:hover {
     color: $activ-link-color;
-
   }
 }
 
@@ -92,7 +91,6 @@ input[type="email"] {
 
 /* Hide the browser's default checkbox */
 .label input {
-  // position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
@@ -102,7 +100,6 @@ input[type="email"] {
 /* Create a custom checkbox */
 .checkmark {
   position: absolute;
-  // top: 27px;
   left: 25px;
   height: 20px;
   width: 20px;
@@ -296,7 +293,6 @@ input[type="email"] {
 ////////////table
 .table {
   border-collapse: collapse;
-  // border-top: 1px solid $input-color;
   margin: 30px auto;
 
   h3 {
@@ -305,16 +301,13 @@ input[type="email"] {
   }
 
   .support-payput-class {
-    // display: none;
     border-top: none;
     background-color: $white-color;
     pointer-events: none;
-    // margin-top: 0px;
 
     h2 {
       padding-left: 0;
       font-size: 13px;
-      // color: $lighter-color;
     }
 
     div {
@@ -331,7 +324,6 @@ input[type="email"] {
   td,
   th {
     text-align: left;
-    // border-bottom: 1px solid $input-color;
     padding: 0;
 
     &:last-child {
@@ -425,7 +417,7 @@ input[type="email"] {
   }
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////
 .date-switch {
   display: inline-flex;
   align-items: center;
@@ -458,7 +450,7 @@ input[type="email"] {
   }
 }
 
-///////////////////////////////////////////////////
+////////////////////////////
 .pagination {
   display: inline-flex;
   margin: 30px auto;
@@ -495,30 +487,6 @@ input[type="email"] {
   color: $Headline-color;
   background-color: $tab-bacgr-color;
 }
-
-//////////////////////////////modal
-/* The Modal (background) */
-// .modal {
-//   // display: none; /* Hidden by default */
-//   position: fixed;
-//   /* Stay in place */
-//   z-index: 9999;
-//   /* Sit on top */
-//   padding-top: 100px;
-//   /* Location of the box */
-//   left: 0;
-//   top: 0;
-//   width: 100%;
-//   /* Full width */
-//   height: 100%;
-//   /* Full height */
-//   overflow: auto;
-//   /* Enable scroll if needed */
-//   background-color: rgb(0, 0, 0);
-//   /* Fallback color */
-//   background-color: rgba(0, 0, 0, 0.7);
-//   /* Black w/ opacity */
-// }
 
 /* Modal Content */
 .modal-content {
@@ -635,9 +603,8 @@ input[type="email"] {
     }
   }
 
-  //////////////////////////////////////////////////chat input
+  //////////////////////////////chat input
   .box-input {
-
     border-bottom: none;
   }
 
@@ -688,22 +655,17 @@ input[type="email"] {
 }
 
 .overlay {
-  // box-sizing: border-box;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
-
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-
   justify-content: center;
   align-items: center;
-
   overflow: auto;
   padding: 30px;
-
   display: none;
 }
 
@@ -716,12 +678,10 @@ input[type="email"] {
 }
 
 .modal {
-  // max-width: 600px;
   margin: auto;
   background-color: #ffffff;
   position: relative;
   width: auto;
-
   display: none;
 }
 
@@ -739,7 +699,6 @@ input[type="email"] {
 /////////////////////////////////////
 .menu-logo-bar {
   background-color: $menu-left-color;
-  // margin-right: auto;
   display: flex;
   height: 40px;
   align-items: center;
@@ -802,7 +761,7 @@ input[type="email"] {
     padding: 15px;
 
     h2 {
-      padding-left: 0;
+      padding-left: 3px;
 
       span {
         color: red;
@@ -811,10 +770,10 @@ input[type="email"] {
 
     textarea {
       width: 100%;
+      padding: -1px;
     }
 
     select {
-
       width: 100%;
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -839,17 +798,19 @@ input[type="email"] {
 
 .border-special-cell {
   border: 1px solid $input-color;
-  ;
+  border-left: none;
+
+  &:nth-child(2) {
+    border-right: none;
+  }
 }
 
 .box-special {
   display: flex;
   flex-direction: column;
-
 }
 
 .scroll {
-  // display: none;
   height: 130px;
   overflow: auto;
 
@@ -875,6 +836,7 @@ input[type="email"] {
 ///////////////////////////////slider
 .slider {
   position: relative;
+  top: 30px;
   -webkit-appearance: none;
   width: 100%;
   height: 5px;
@@ -883,7 +845,6 @@ input[type="email"] {
   opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
-  
 }
 
 .slider:hover {
@@ -910,10 +871,8 @@ input[type="email"] {
 .slider-value {
   position: absolute;
   transform: translateX(-50%);
-  top: 20px;
+  top: 60px;
   left: 50%;
-  // transform: translateX(-10%);
-  // display: none;
 }
 
 ///support classes
@@ -950,7 +909,6 @@ input[type="email"] {
 
 ////////////////helper classes for modal size
 .width80andh2pading {
-
   width: 100%;
   min-width: 80vw;
 
@@ -985,14 +943,12 @@ input[type="email"] {
   .space-betwen.scroll>div:nth-child(3) {
     h2 {
       color: transparent;
-      // margin-top: 137px;
     }
   }
 
 }
 
 .width50andh2pading {
-
   width: 50%;
   min-width: 650px;
 
@@ -1012,14 +968,12 @@ input[type="email"] {
 
 ////////////////////quit
 .quit {
-
   display: flex;
   justify-content: flex-end;
 
   button {
     width: 100px;
     margin: 20px;
-    // text-align: center;
   }
 }
 
