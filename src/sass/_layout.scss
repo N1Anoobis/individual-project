@@ -23,6 +23,11 @@
 @media (max-width: 767px) {
   @include grid('sm');
 
+  #myChart{
+    min-height: 150px;
+    min-width: 400px;
+  }
+
   .width80andh2pading {
 
     width: 90%;
