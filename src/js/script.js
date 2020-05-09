@@ -236,8 +236,13 @@ slider.addEventListener('input', (e) => {
 
 var ctx = document.getElementById('myChart').getContext('2d');
 /* eslint-disable */
-var chart = new Chart(ctx, { 
-  
+
+//margin for chart legend
+Chart.Legend.prototype.afterFit = function () {
+  this.height = this.height + 80;
+};
+var chart = new Chart(ctx, {
+
   // 1
   type: 'bar',
   data: {
@@ -245,31 +250,50 @@ var chart = new Chart(ctx, {
     labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'],
     // 3
     datasets: [{
-      // 4
-      label: 'Signups',
-      // 5
-      backgroundColor: '#8DBEC8',
-      borderColor: '#8DBEC8',
-      // 6
-      data: [52, 51, 41, 94, 26, 6, 72, 9, 21, 88],
-    },
-    {
-      label: 'FTD',
-      backgroundColor: '#F29E4E',
-      borderColor: '#F29E4E',
-      data: [6, 72, 1, 0, 47, 11, 50, 44, 63, 76],
-    },
-    {
-      label: 'Earned',
-      backgroundColor: '#71B374',
-      borderColor: '#71B374',
-      data: [59, 49, 68, 90, 67, 41, 13, 38, 48, 48],
-      // 7
-      hidden: true,
-    }
+        // 4
+        label: 'Signups',
+        // 5
+        backgroundColor: '#8DBEC8',
+        borderColor: '#8DBEC8',
+        // 6
+        data: [52, 51, 41, 94, 26, 6, 72, 9, 21, 88],
+      },
+      {
+        label: 'FTD',
+        backgroundColor: '#F29E4E',
+        borderColor: '#F29E4E',
+        data: [6, 72, 1, 0, 47, 11, 50, 44, 63, 76],
+      },
+      {
+        label: 'Earned',
+        backgroundColor: '#71B374',
+        borderColor: '#71B374',
+        data: [59, 49, 68, 90, 67, 41, 13, 38, 48, 48],
+        // 7
+        hidden: true,
+      }
     ]
   },
+  options: {
+    maintainAspectRatio: false,
+    responsive: true,
+    scales: {
+      yAxes: [{
+        gridLines: {
+          display: false
+        }
+      }]
+    },
+    legend: {
+      labels: {
+        // allign:'end',
+        // maintainAspectRatio: false,
+        // responsive: true,
+        fontSize: 14,
+        usePointStyle: true,
+        padding: 60,
+      }
+    }
+  }
 });
 
-
-// console.log(chart);

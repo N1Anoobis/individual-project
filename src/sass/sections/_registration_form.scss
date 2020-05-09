@@ -20,6 +20,7 @@ div#pages {
   justify-content: flex-end;
   border-bottom: 1px solid $menu-left-color;
   width: calc(100% - 200px);
+  z-index: 1;
 }
 
 .content-disapear-mobile {
@@ -57,7 +58,7 @@ body {
 .box-input {
   display: flex;
   justify-content: center;
-  padding: 30px;
+  padding: 34px;
   border-top: 1px solid $input-color;
   border-bottom: 1px solid $input-color;
 }
@@ -96,18 +97,27 @@ body {
       border-bottom: 1px solid $input-color;
       min-width: 300px;
       width: 100%;
+      padding: 40px 0;
     }
 
     div.input {
       height: 40px;
+      width: 250px;
+
+      input {
+        width: 100%;
+      }
     }
 
     .vessel {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 0 30%;
+      // margin: 0 35%;
+      margin: auto;
       min-width: 290px;
+      width: 400px;
     }
   }
 }
+

@@ -326,6 +326,10 @@ input[type="email"] {
     text-align: left;
     padding: 0;
 
+    h2 {
+      margin-right: 6vw;
+    }
+
     &:last-child {
       text-align: center;
     }
@@ -340,6 +344,15 @@ input[type="email"] {
       filter: $white-svg;
     }
 
+    .bin {
+      margin-right: 25px;
+      // margin-left: 10px;
+    }
+
+    .link {
+      margin-left: 25px;
+    }
+
     &:hover {
       background-color: $tab-bacgr-color;
 
@@ -349,6 +362,7 @@ input[type="email"] {
 
       .bin {
         filter: $black-svg;
+        // margin-right: 20px;
       }
     }
   }
@@ -356,18 +370,26 @@ input[type="email"] {
 
 // table numbers
 .numbers {
+
   border-top: none;
   font-family: $roboto-font;
   font-weight: lighter;
 
   h2 {
-    margin: 20px;
+    margin: 20px 0 10px 0;
     width: 150px;
     padding: 0;
   }
 
   td {
-    margin-bottom: -10px;
+    // border-top: none;
+
+
+    &:last-child {
+      text-align: right;
+      padding-top: 12px;
+      // display: none;
+    }
   }
 }
 
@@ -380,6 +402,10 @@ input[type="email"] {
   align-items: center;
   justify-content: left;
   position: relative;
+
+  .blue-text {
+    padding-left: 5px;
+  }
 
   img {
     width: 43px;
@@ -738,6 +764,23 @@ input[type="email"] {
   border-right: none;
   transition: .3s;
 
+  &:nth-child(1) {
+    img {
+      filter: $gray-svg;
+
+      &:nth-child(3) {
+        width: 13px;
+        ;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0;
+  }
+
   &:hover {
     background-color: $input-color;
   }
@@ -888,6 +931,14 @@ input[type="email"] {
   color: $Headline-color;
 }
 
+.remove-border {
+  table {
+    tr {
+      border-top: none;
+    }
+  }
+}
+
 .line {
   border-bottom: 1px solid $lighter-color;
 }
@@ -901,7 +952,7 @@ input[type="email"] {
 .blue-text {
   p {
     font-family: $roboto-font;
-    margin-left: 10px;
+    // margin-left: 10px;
     color: $dot-color;
     padding-right: 10px;
   }
@@ -1016,3 +1067,14 @@ input[type="email"] {
   margin: 0 auto;
 }
 
+.chart-support {
+  height: 550px;
+  flex: 0 0 auto;
+  width: 80%;
+  padding-bottom: 70px;
+  margin: 0 auto;
+
+  h2 {
+    padding-left: 0;
+  }
+}
