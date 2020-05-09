@@ -286,9 +286,6 @@ var chart = new Chart(ctx, {
     },
     legend: {
       labels: {
-        // allign:'end',
-        // maintainAspectRatio: false,
-        // responsive: true,
         fontSize: 14,
         usePointStyle: true,
         padding: 60,

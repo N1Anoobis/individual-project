@@ -865,7 +865,6 @@ input[type="email"] {
 
   /* Track */
   &::-webkit-scrollbar-track {
-    // box-shadow: inset 0 0 5px grey;
     border-radius: none;
   }
 
@@ -952,7 +951,6 @@ input[type="email"] {
 .blue-text {
   p {
     font-family: $roboto-font;
-    // margin-left: 10px;
     color: $dot-color;
     padding-right: 10px;
   }
