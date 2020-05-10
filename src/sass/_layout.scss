@@ -23,6 +23,19 @@
 @media (max-width: 767px) {
   @include grid('sm');
 
+  // .detail{
+
+  //   .table{
+  //     table-layout: auto;
+  //     min-width: auto;
+
+  //     td{
+  //       width: auto;
+
+  //     }
+  //   }
+  // }
+
   .form-section {
     .vessel {
       flex-direction: column;
@@ -294,4 +307,27 @@
 
 @media(min-width: 1200px) {
   @include grid('xl');
+}
+
+@media (hover: none) {
+  table {
+    tr .bin {
+      filter: $black-svg;
+      margin-left: 10px;
+    }
+
+    tr .link {
+      filter: $orange-svg;
+      margin-right: 10px;
+    }
+  }
+
+  .date-switch {
+  
+    background-color: $input-color;
+
+    .icon{
+      filter: $black-svg;
+    }
+  }
 }

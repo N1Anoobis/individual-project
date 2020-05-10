@@ -217,7 +217,7 @@ const slider = document.querySelector('.slider');
 const sliderValue = document.querySelector('.slider-value');
 slider.addEventListener('input', (e) => {
 
-  sliderValue.textContent = e.target.value + 'hours';
+  sliderValue.textContent = e.target.value + ' ' + 'hrs';
 
   sliderValue.style.left = `${e.target.value}%`;
 
@@ -234,14 +234,14 @@ slider.addEventListener('input', (e) => {
 });
 
 
-var ctx = document.getElementById('myChart').getContext('2d');
+const ctx = document.getElementById('myChart').getContext('2d');
 /* eslint-disable */
 
 //margin for chart legend
 Chart.Legend.prototype.afterFit = function () {
   this.height = this.height + 80;
 };
-var chart = new Chart(ctx, {
+const chart = new Chart(ctx, {
 
   // 1
   type: 'bar',
@@ -293,4 +293,3 @@ var chart = new Chart(ctx, {
     }
   }
 });
-

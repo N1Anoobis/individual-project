@@ -35,7 +35,6 @@ div#pages {
 
 .content {
   width: 100%;
-  // width: 80%;
 }
 
 .general {
@@ -113,11 +112,21 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      // margin: 0 35%;
       margin: auto;
       min-width: 290px;
-      width: 400px;
+      max-width: 400px;
     }
   }
 }
 
+.detail {
+  .table {
+    table-layout: fixed;
+    min-width: 1000px;
+
+    td {
+      width: 1%;
+      white-space: nowrap;
+    }
+  }
+}
