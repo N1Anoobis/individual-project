@@ -398,12 +398,14 @@ input[type="email"] {
     margin: 20px 0 10px 0;
     width: 150px;
     padding: 0;
+    // font-size: 16px;
   }
 
   td {
     &:last-child {
       text-align: right;
-      padding-top: 12px;
+      padding-top: 10px;
+      padding-right: 25px;
     }
   }
 }
@@ -476,7 +478,7 @@ input[type="email"] {
     background-color: $tab-bacgr-color;
 
     img {
-      margin: 0 5px;
+      margin: 0 0 0 5px;
       filter: $light-gray-svg;
     }
   }
@@ -489,7 +491,7 @@ input[type="email"] {
 
   img {
     width: 8px;
-    margin: 0 5px;
+    margin: 0 0 0 5px;
     filter: $white-svg;
   }
 }
@@ -1098,5 +1100,12 @@ input[type="email"] {
 
   h2 {
     padding-left: 0;
+  }
+}
+
+.paddings {
+  td>*,
+  th>* {
+    padding: 0 10px;
   }
 }

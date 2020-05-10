@@ -120,9 +120,13 @@ body {
 }
 
 .detail {
+  .scroll-wrapper table {
+    width: auto;
+    min-width: auto;
+  }
+
   .table {
     table-layout: fixed;
-    min-width: 1000px;
 
     td {
       width: 1%;
