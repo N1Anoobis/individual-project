@@ -299,6 +299,12 @@
 
 @media(min-width: 768px) {
   @include grid('md');
+
+  .menu-logo-bar {
+    .fa {
+      display: none;
+    }
+  }
 }
 
 @media(min-width: 992px) {
@@ -323,10 +329,10 @@
   }
 
   .date-switch {
-  
+
     background-color: $input-color;
 
-    .icon{
+    .icon {
       filter: $black-svg;
     }
   }

@@ -6,19 +6,19 @@ function toggleMenu(visible) {
   if (document.documentElement.clientWidth < 757) {
 
     document.querySelector('.hamburger-content').classList.toggle('menu-mobile', visible);
-    //x for mobile men
+    //x for mobile menu
     document.querySelector('.fa').classList.toggle('fa-times');
     document.querySelector('.fa').classList.toggle('fa-bars');
   }
 }
 
 function menuBarDisapear() {
-  if (document.documentElement.clientWidth > 752) {
-    document.querySelector('.fa').classList.add('disapear');
-  }
-  if (document.documentElement.clientWidth < 753) {
-    document.querySelector('.fa').classList.remove('disapear');
-  }
+  // if (document.documentElement.clientWidth > 752) {
+  //   document.querySelector('.fa').classList.add('disapear');
+  // }
+  // if (document.documentElement.clientWidth < 753) {
+  //   document.querySelector('.fa').classList.remove('disapear');
+  // }
   if (document.documentElement.clientWidth > 752 && mobileMenuOpen == false) {
     document.querySelector('.hamburger-content').classList.remove('menu-mobile');
 
@@ -33,19 +33,10 @@ function menuBarDisapear() {
   }
   if (document.documentElement.clientWidth > 752 && mobileMenuOpen == true) {
     document.querySelector('.hamburger-content').classList.remove('menu-mobile');
-
-
   }
   if (document.documentElement.clientWidth < 753 && mobileMenuOpen == true) {
     document.querySelector('.hamburger-content').classList.remove('menu-mobile');
-
-    // if (menuBar.classList.contains('fa-bars')) {
-    //   document.querySelector('.fa').classList.add('fa-times');
-    //   document.querySelector('.fa').classList.remove('fa-bars');
-    // }
-
   }
-
 }
 
 const allA = document.querySelectorAll('.ul a');
@@ -57,17 +48,12 @@ document.querySelector('.fa').addEventListener('click', function (e) {
   toggleMenu();
 });
 
-
-
 for (const all of allA) {
   all.addEventListener('click', function (e) {
     e.preventDefault();
     mobileMenuOpen = false;
   });
 }
-
-
-
 
 function moveMenuElements() {
   const content = document.querySelector('.top-bar').querySelector('.content-disapear-mobile');
@@ -97,8 +83,6 @@ window.addEventListener('load', function (e) {
   toggleMenu();
   moveMenuElements();
   menuBarDisapear();
-
-
 });
 
 const pages = document.getElementById('pages').children;
