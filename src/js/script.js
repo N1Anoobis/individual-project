@@ -201,7 +201,7 @@ const slider = document.querySelector('.slider');
 const sliderValue = document.querySelector('.slider-value');
 slider.addEventListener('input', (e) => {
 
-  sliderValue.textContent = e.target.value + ' ' + 'hrs';
+  sliderValue.textContent = e.target.value + ' ' + 'h';
 
   sliderValue.style.left = `${e.target.value}%`;
 
@@ -220,7 +220,6 @@ slider.addEventListener('input', (e) => {
 
 const ctx = document.getElementById('myChart').getContext('2d');
 /* eslint-disable */
-
 //margin for chart legend
 Chart.Legend.prototype.afterFit = function () {
   this.height = this.height + 80;

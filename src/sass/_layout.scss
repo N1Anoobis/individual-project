@@ -23,18 +23,9 @@
 @media (max-width: 767px) {
   @include grid('sm');
 
-  // .detail{
-
-  //   .table{
-  //     table-layout: auto;
-  //     min-width: auto;
-
-  //     td{
-  //       width: auto;
-
-  //     }
-  //   }
-  // }
+  .pagination {
+    a {padding: 13px;}
+  }
 
   .form-section {
     .vessel {
@@ -181,6 +172,7 @@
     height: 70px;
     padding-left: 45px;
     padding-bottom: 20px;
+    width: 100%;
   }
 
   .box {
@@ -235,8 +227,9 @@
     flex-direction: column;
     align-items: center;
     z-index: 3999;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: calc(100vh - 60px);
+    overflow-x: hidden;
 
     .user-info {
       transform: translateX(calc(50% - 70px));
